@@ -4,3 +4,10 @@
 
   <button (click)="addAppoitment()">Add</button>
 </div>
+
+<ul>
+  <li *ngFor="let app of appointmets; index as i">
+    {{app.title}} {{app.date}}
+    <button (click)="deleteAppointment(i)">Delete</button>
+  </li>
+</ul>
